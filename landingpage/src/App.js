@@ -7,12 +7,21 @@ import Carousel from 'react-bootstrap/Carousel';
 function App() {
   return (
   <div className="App container">
+        <Header/>
         <WelcomePage/>
         <Aboutpage/>
     </div>
   );
 }
 
+function Header(){
+  return(
+    <div className='header'>
+      <h1>Sarah So</h1>
+    </div>
+  )
+  
+}
 
 function PortfolioCarousel() {
   return (
@@ -65,7 +74,7 @@ function WelcomePage () {
   <div>
     <PortfolioCarousel/>
     <div className="typewriter">
-      <h1>Sarah So</h1>
+      
     </div>
   </div>  );
 }
