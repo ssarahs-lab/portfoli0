@@ -1,61 +1,78 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import IndividualIntervalsExample from './components/carousel';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel';
+
+
 
 function App() {
   return (
-    <div className="App container">
-  
- 
-     
-    <BrowserRouter>
-    <header>
-        <ul className='ul-display'>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/aboutpage">About</a></li>
-          
-        </ul>
-      </header>
-
- 
-
-    <Routes>
-        
-    <Route path="/home" element={<WelcomePage/>}/>
-        <Route path="/aboutpage" element={<Aboutpage/>}/>
-        <Route
-            path="*"
-            element={
-              <div>
-                <h2>404 Page not found</h2>
-                <img src={require('./images/habitmakr_landing.gif')}></img>
-              </div>
-            }
-          />
+  <div className="App container">
+        <WelcomePage/>
+        <Aboutpage/>
+    </div>
+  );
+}
 
 
-      </Routes>  
-    </BrowserRouter>
-  
-  </div>
-     
+function PortfolioCarousel() {
+  return (
+    <Carousel variant="dark">
+      <Carousel.Item interval={3000}>
+        <img
+          className="d-block w-80"
+          src={require('./images/chattoroboto.gif')}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Chatto Robotto</h3>
+          <p>Chat app</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+        <a href="https://habitmakr.herokuapp.com/" target="_blank">
+        <img
+          className="d-block w-80"
+          src={require('./images/habitmakr_landing.gif')}
+          alt="Second slide"
+        /></a>
+        <Carousel.Caption>
+          <h3>HabitMakr</h3>
+          <p>HabitMaking app</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+      <a href="https://hidden-tundra-11775.herokuapp.com/" target="_blank">
+        <img
+          className="d-block w-80"
+          src={require('./images/moodtracker_graph.gif')}
+          alt="Third slide"
+        />
+        </a>
+        <Carousel.Caption>
+          <h3>MoodTrackr</h3>
+          <p>
+            MoodTrackr app
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 }
 
 function WelcomePage () {
-  return ( <div>
-
-<div className="typewriter">
-
-  <IndividualIntervalsExample/>
-  <h1>Sarah So</h1>
-</div>
+  return ( 
+  
+  <div>
+    <PortfolioCarousel/>
+    <div className="typewriter">
+      <h1>Sarah So</h1>
+    </div>
   </div>  );
 }
 
 function Aboutpage(){
   return(<div className='animate__animated animate__fadeIn'>
-    <h2 data-testid="heading">About this page</h2>
+    <h2 data-testid="heading">About me</h2>
     <img src={require('./images/moodtrack_form.gif')} className="aboutImage"/>
     <p>Es is an AI chatbot powered by OpenAI's GPT3.</p>
     <p>This page was made by Sarah So for her portfolio as part of General Assembly's Software Immersive Course.</p>
