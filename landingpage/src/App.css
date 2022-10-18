@@ -27,6 +27,7 @@
 .header {
 
   text-align: left;
+  margin-left: 25px;
 
 }
 
@@ -46,3 +47,15 @@
   }
 }
 
+img {
+
+ border-top: 2px solid white;
+ width: 70vw;
+ margin-bottom: 20px;
+ padding: 10px;
+ margin-left: 25px;
+ padding-bottom: 30px;
+ padding-top: 40px;
+ ;
+
+}

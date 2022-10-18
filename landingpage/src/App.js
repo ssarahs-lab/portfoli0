@@ -8,8 +8,8 @@ function App() {
   return (
   <div className="App container">
         <Header/>
-        <WelcomePage/>
-        <Aboutpage/>
+        <Portfolio/>
+       
     </div>
   );
 }
@@ -23,56 +23,40 @@ function Header(){
   
 }
 
-function PortfolioCarousel() {
-  return (
-    <Carousel variant="dark">
-      <Carousel.Item interval={3000}>
-        <img
+function Portfolio(){
+  return(
+    <div>
+      <img
           className="d-block w-80"
           src={require('./images/chattoroboto.gif')}
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>Chatto Robotto</h3>
-          <p>Chat app</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item interval={3000}>
-        <a href="https://habitmakr.herokuapp.com/" target="_blank">
         <img
           className="d-block w-80"
           src={require('./images/habitmakr_landing.gif')}
           alt="Second slide"
-        /></a>
-        <Carousel.Caption>
-          <h3>HabitMakr</h3>
-          <p>HabitMaking app</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item interval={3000}>
-      <a href="https://hidden-tundra-11775.herokuapp.com/" target="_blank">
+        />
         <img
           className="d-block w-80"
           src={require('./images/moodtracker_graph.gif')}
           alt="Third slide"
         />
-        </a>
-        <Carousel.Caption>
-          <h3>MoodTrackr</h3>
-          <p>
-            MoodTrackr app
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+         <img
+          className="d-block w-80"
+          src={require('./images/wordlescreenshot.png')}
+          alt="Second slide"
+        />
+    </div>
+  )
 }
+
+
 
 function WelcomePage () {
   return ( 
   
   <div>
-    <PortfolioCarousel/>
+   
     <div className="typewriter">
       
     </div>
